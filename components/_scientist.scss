@@ -1,0 +1,14 @@
+.scientist__category-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: $text_border-color;
+    @include text(12px);
+    color: $background-color;
+}
+.scientist__category {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}

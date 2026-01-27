@@ -1,0 +1,6 @@
+.team__name {
+    @include text(14px);
+}
+.team__info {
+    @include text(12px);
+}

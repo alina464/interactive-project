@@ -1,0 +1,44 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    gap: 184px;
+    padding: 60px 0px;
+}
+.footer__info {
+    @include text(12px);
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.footer__box-info {
+    @include text(12px);
+    display: flex;
+    flex-direction: row;
+}
+#footer__email {
+    width: 204px;
+    height: 35px;
+    opacity: 1;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-right: 80px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: $button-background-color;
+    border: none;
+}
+#footer__subscribe {
+    width: 107px;
+    height: 35px;
+    opacity: 1;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: $text_border-color;
+    color: $background-color; 
+    margin-left: 34px
+}
+.footer__box-important {
+    @include text(6px);
+    margin-top: 18px;
+}

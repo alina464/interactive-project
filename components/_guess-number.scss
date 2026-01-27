@@ -1,0 +1,38 @@
+.number-box {
+    @extend %box-style;
+}
+#number {
+    width: 115px;
+    height: 35px;
+    top: 273px;
+    left: 432px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 10px;
+    opacity: 1;
+    @include text(12px);
+    color: rgb(126, 126, 126);
+    border: none;
+    background-color: rgb(215, 215, 215);
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.25);
+}
+#check-number {
+    width: 35px;
+    height: 35px;
+    left: 115px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    opacity: 1;
+    padding: 10px;
+    gap: 10px;
+    background-color: $text_border-color;
+    position: absolute;
+    box-shadow: 3px 3px 0px 0px $shadow-color;
+}
+#check-number svg {
+    position: static;
+    width: 15px;
+    height: 15px;
+    display: block;
+    color: $background-color;
+}

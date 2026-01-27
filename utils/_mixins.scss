@@ -1,0 +1,22 @@
+@import "../utils/variables";
+@mixin text($font-size) {
+    font-family: Montserrat Alternates;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: $font-size;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: $text_border-color;
+
+}
+@mixin second-text($font-family, $font-size) {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-style: Regular;
+    font-size: $font-size;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}

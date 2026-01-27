@@ -1,0 +1,161 @@
+@import "../utils/mixins";
+@import "../utils/placeholders";
+@import "../utils/variables";
+@import "../components/calculator";
+@import "../components/calculator-of-time";
+@import "../components/check-birthday";
+@import "../components/football";
+@import "../components/footer";
+@import "../components/google-dinosaur";
+@import "../components/guess-number";
+@import "../components/header";
+@import "../components/main";
+@import "../components/our-team";
+@import "../components/rock-paper";
+@import "../components/scientist";
+@import "../components/three-numbers"; 
+
+.container__second {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: $background-color;
+}
+.container {
+  max-width: 1090px;
+  background-color: $background-color;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+a {
+   color: $text_border-color;
+}
+.body__modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center; 
+  align-items: center;
+  z-index: 99;
+  padding:30px 0;
+}
+.body__modal-window {
+  position: relative;
+  width: 576px;
+  height: 316px;
+  background-color: $background-color;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  transform: scale(0.9);
+  opacity: 0;
+  transition:
+  transform 0.3s ease, opacity 0.3s ease;
+}
+.body__modal-text, .body__modal-name {
+  @include second-text('Inter', 12px);
+}
+.body__modal-text {
+  margin-bottom: 24px;
+  max-width: 392px;
+}
+.body__modal-yourname {
+  width: 169px;
+  height: 35px;
+  opacity: 1;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-right: 90px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border: none; 
+  background-color: $button-background-color;
+  @include text(12px);
+}
+.body__modal-send {
+  width: 105px;
+  height: 35px;
+  opacity: 1;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  background-color: $text_border-color;
+  box-shadow: 3px 3px 0px 0px $shadow-color;
+  @include text(12px);
+  color: $background-color;
+  cursor: pointer;
+}
+.body__modal-wrap {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 100%;
+  min-height: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.body__modal {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.body__modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+.body__modal.active .body__modal-window {
+  transform: scale(1);
+  opacity: 1;
+}
+.body__modal-close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+}
+.no-scroll {
+  overflow: hidden;
+}
+.modal__decor-sword {
+  position: absolute;
+  top: 154px;
+  left: 41px;
+}
+.modal__decor-puzzle {
+  position: absolute;
+  top: 230px;
+  left: 85px;
+}
+.modal__decor-development {
+  position: absolute;
+  top: 154px;
+  right: 41px;
+}
+.modal__decor-tic {
+  position: absolute;
+  top: 230px;
+  right: 85px;
+}
