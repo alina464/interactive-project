@@ -1,6 +1,65 @@
 .team__name {
     @include text(14px);
+    padding: 20px 0px;
 }
 .team__info {
     @include text(12px);
+    padding-bottom: 40px;
+}
+.slide {
+    width: 1000px;
+    height: 290px;
+    position: relative;
+    overflow: hidden;
+}
+.slide__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+.slide__box {
+    position: absolute;
+    top: 0;
+    left: 405px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin: 20px;
+}
+.slide__box.active {
+    opacity: 1;
+}
+.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    left: 20px;
+    opacity: 1;
+}
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    right: 20px;
+    opacity: 1;
+}
+.switches {
+    display: flex;
+    gap: 6px;
+    position: absolute;
+    top: 260px;
+    left: 450px;
+}
+.current-photo {
+    width: 18px;
+    height: 3px;
+    background-image: url("../img/next-photo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.current-photo.current {
+    background-image: url("../img/current-photo.png");
+    width: 30px;
 }

@@ -87,7 +87,7 @@
                                     </button>
                                 </div>
                                 <div class="rock-paper-score">
-                                    <p>Рахунок</p>
+                                    <p id="rock-paper-count">Рахунок</p>
                                     <p>Комп’ютер<span id="computer-score"></span></p>
                                     <p>Ви<span id="user-score"></span></p>
                                 </div>
@@ -120,16 +120,18 @@
                                     </svg>
                                 </button>
                                 <div class="check-time-line"></div>
-                                <p id="calculator-of-time-result">Результат</p>
+                                <p id="calculator-of-time-result"></p>
                             </div>
                         </section>
                         <section class="dinosaur">
                             <h2 class="section__title">Google динозавр</h2>
-                            <div></div>
+                            <canvas id="dino-board"></canvas>
                         </section>
                         <section class="football">
                             <h2 class="section__title">Футбол</h2>
-                            <div class="football__box"></div>
+                            <div class="football__box">
+                                <img id="interactive-ball" alt="" src="./img/football.svg">
+                            </div>
                         </section>
                         <section class="three__numbers">
                             <h2 class="section__title">Введіть 3 числа</h2>
@@ -138,29 +140,61 @@
                                 <input id="three__numbers-second" class="three__numbers-input" placeholder="Введіть число">
                                 <input id="three__numbers-third" class="three__numbers-input" placeholder="Введіть число">
                             </div>
-                            <p class="three-numbers-text">Найбільше число, яке ви ввели - <span id="biggest-number"></span></p>
+                            <button id="three__numbers-check">Перевірити</button>
+                            <div class="three__numbers-box">
+                                <p class="three-numbers-text">Найбільше число, яке ви ввели - </p>
+                            </div>
                         </section>
                         <section class="team">
                             <h2 class="section__title">Наша команда</h2>
-                            <img src="" alt="">
-                            <h3 class="team__name">Ім’я студента</h3>
-                            <p class="team__info">Інформація про роботу, яку він/вона виконав/ла</p>
+                            <div class="slide">
+                                <div class="slide__box">
+                                    <img  class="slide__photo" src="./img/me.jpg" alt="Фото розробника" width="150px" height="150px">
+                                    <h3 class="team__name">Аліна Чуднецова</h3>
+                                    <p class="team__info">Розробляла цей сайт</p>
+                                </div>
+                                <div class="slide__box">
+                                    <img class="slide__photo" src="./img/figma.png" alt="Фігма"  width="150px" height="150px">
+                                    <h3 class="team__name">Figma</h3>
+                                </div>
+                                <div class="slide__box">
+                                    <img class="slide__photo"src="./img/youtube.png" alt="Ютуб"  width="150px" height="150px">
+                                    <h3 class="team__name">YouTube</h3>
+                                </div>
+                                <div class="slide__box">
+                                    <img class="slide__photo" src="./img/chatgpt.png" alt="ЧатДЖПТ"  width="150px" height="150px">
+                                    <h3 class="team__name">ChatGPT</h3>
+                                </div>
+                                <div>
+                                    <img class="prev controlls" src="./img/left.png" alt="">
+                                </div>
+                                <div>
+                                    <img class="next controlls"src="./img/right.png" alt="">
+                                </div>
+
+                                <div class="switches">
+                                    <div class="current-photo"></div>
+                                    <div class="current-photo"></div>
+                                    <div class="current-photo"></div>
+                                    <div class="current-photo"></div>
+                                </div>
+                            </div>
                         </section>
                         <section class="scientist">
                             <h2 class="section__title">Обери вченого/их</h2>
-                            <div class="scientist__photo">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
-                                <img src="" alt="">
+                            <div class="scientist__photos">
+                                <img class="scientist__photos-item" src="./img/alberteinstein.jpg" alt="">
+                                <img class="scientist__photos-item" src="./img/isaacnewton.jpg" alt="">
+                                <img class="scientist__photos-item" src="./img/galileogalilei.jpg" alt="">
+                                <img class="scientist__photos-item" src="./img/mariecurie.jpg" alt="">
+                                <img class="scientist__photos-item" src="./img/johanneskepler.jpg" alt="">
+                                <img class="scientist__photos-item" src="./img/nikolauscopernikus.jpg" alt="">
+                                <img class="scientist__photos-item" src="./img/maxplanck.png" alt="">
+                                <img class="scientist__photos-item" src="./img/katharineblodgett.jpg" alt="">
+                                <img class="scientist__photos-item" src="./img/adalovelace.jpg" alt="">
+                                <img class="scientist__photos-item" src="./img/sarahgoode.jpeg" alt="">
+                                <img class="scientist__photos-item" src="./img/lisemeitner.png" alt="">
+                                <img class="scientist__photos-item" src="./img/hannahammarström.png" alt="">
                             </div>
                             <div class="scientist__category">
                                 <button class="scientist__category-button">Які вчені народилися в 19 ст.</button>
@@ -199,6 +233,13 @@
             </div>
     </footer>
     </div>
+    <script type="module" src="./js/rock-paper.js"></script>
+    <script type="module" src="./js/calculatoroftime.js"></script>
+    <script type="module" src="./js/scientist.js"></script>
+    <script type="module" src="./js/team.js"></script>
+    <script type="module" src="./js/three-numbers.js"></script>
+    <script type="module" src="./js/dino.js"></script>
+    <script type="module" src="./js/football.js"></script>
     <script type="module" src="./js/modal.js"></script>
     <script type="module" src="./js/header.js"></script>
     <script type="module" src="./js/checkbirthday.js"></script>

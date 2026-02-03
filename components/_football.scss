@@ -6,4 +6,8 @@
     background-color: $football-field;
     margin: 36px 0px;
     border: solid 2px $text_border-color;
+    position: relative;
+}
+#interactive-ball {
+    position: absolute;
 }

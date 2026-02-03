@@ -3,6 +3,10 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 36px 0px;
+    gap: 30px;
+}
+#rock-paper-count, #computer-score , #user-score {
+    margin-left: 10px;
 }
 .rock__paper-move {
     display: flex;

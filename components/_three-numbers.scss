@@ -26,3 +26,23 @@
     color: $text_border-color; 
     padding-bottom: 36px;
 }
+#three__numbers-check {
+    width: 182;
+    height: 35;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    background-color: $text_border-color;
+    color: $background-color;
+    margin-bottom: 20px;
+}
+.three__numbers-box {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Montserrat Alternates';
+    font-size: 12px;
+}
